@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://db3kkvaqyldu1"]
+
+[ext_resource type="FontFile" uid="uid://c5op44aa6tusb" path="res://Pix32.ttf" id="1_7i86h"]
+[ext_resource type="Texture2D" uid="uid://bjbhmn4xcy2x7" path="res://Screenshot 2026-01-31 225552.png" id="1_j6esw"]
+[ext_resource type="Script" uid="uid://bgvn811qrw7eg" path="res://menu_scene.gd" id="1_q5s4c"]
+[ext_resource type="FontFile" uid="uid://c5wsvxu2dmpm0" path="res://Pixelout Personal Use Only.ttf" id="2_j6esw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5n0ru"]
+texture = ExtResource("1_j6esw")
+modulate_color = Color(0.41215247, 0.41215247, 0.41215247, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5n0ru"]
+bg_color = Color(0.21561348, 0.1617052, 0.3143345, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t82bx"]
+bg_color = Color(0.10444475, 0.07171359, 0.16267538, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2sv1"]
+bg_color = Color(0.11264708, 0.07825156, 0.17384943, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_d2sv1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q5s4c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t82bx"]
+
+[node name="MenuScene" type="Control" unique_id=1989058430]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q5s4c")
+
+[node name="Panel" type="Panel" parent="." unique_id=1050693511]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5n0ru")
+
+[node name="Button" type="Button" parent="." unique_id=1683927022]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = 40.0
+offset_right = 134.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8859442, 0.902766, 0.57786053, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 3
+theme_override_fonts/font = ExtResource("1_7i86h")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_5n0ru")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t82bx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2sv1")
+text = "Play"
+
+[node name="Label" type="Label" parent="." unique_id=1383807360]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -65.0
+offset_right = 373.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 0.59000057, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9990001)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("2_j6esw")
+theme_override_font_sizes/font_size = 80
+text = "	 Masked Monster"
+
+[node name="Button2" type="Button" parent="." unique_id=1218806615]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 552.0
+offset_right = 1122.0
+offset_bottom = 620.0
+theme = SubResource("Theme_d2sv1")
+theme_override_fonts/font = ExtResource("1_7i86h")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_q5s4c")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_t82bx")
+text = "Exit"
+
+[node name="Label2" type="Label" parent="." unique_id=1819209873]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 585.0
+offset_right = 268.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("1_7i86h")
+theme_override_font_sizes/font_size = 24
+text = "Sementara Developer"
+
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_exit_pressed"]
